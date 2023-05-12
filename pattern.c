@@ -1,24 +1,21 @@
 #include <stdio.h>
 
-int main() {
-    int n, i, j;
-    printf("Enter the size of the square: ");
-    scanf("%d", &n);
-
-    // Iterate over each row
-    for(i=1; i<=n; i++) {
-        // Iterate over each column
-        for(j=1; j<=n; j++) {
-            // Check if we are on the first or last row
-            // or the first or last column
-            if(i == 1 || i == n || j == 1 || j == n) {
-                printf("*");
-            }
-            else {
-                printf(" ");
-            }
-        }
-        printf("\n");
+int main(){
+  int i,j,n;
+  printf("Enter the dimensions of the square: ");
+  scanf("%d",&n);
+  //Iterating through the number of rows
+  for(i=0;i<n;i++){
+    //Iterating through the number of columns
+    for(j=0;j<n;j++){
+      if(i==0||i==n-1||j==0||j==n-1){
+        printf("* ");
+      }
+      else{
+        printf("  ");
+      }
     }
-    return 0;
+    printf("\n");
+  }
+  return 0;
 }
